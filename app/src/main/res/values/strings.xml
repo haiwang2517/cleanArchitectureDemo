@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">myTravelWorld</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_merge">Merge</string>
+    <string name="merge_button_name">添加素材</string>
+    <string name="merge_get_dic">获取字典</string>
+</resources>
