@@ -30,6 +30,15 @@ project
 - data -> domain
 - domain -> ui
 
+__data层为上层数据做支撑__
+
+1. data层数据拆分为更细的组件，比如：`MaterialData` 模块，`AssetData` 模块，`DicData` 模块，`GameData` 模块。
+2. domain层根据不同的应用场景组合依赖需要的data组件，并实现对应的逻辑。
+3. ui层实现ui逻辑。
+
+> `data` 作为数据底座，提供具体的数据访问能力，比如：网络请求、数据库访问、文件访问等等。 `domain`
+> 对应具体应用包的业务逻辑； `ui` 对应具体应用包的UI逻辑。
+
 ## 依赖组件
 
 ### hilt 依赖注入组件
