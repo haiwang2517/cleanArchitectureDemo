@@ -1,0 +1,60 @@
+[versions]
+android = "8.2.0"
+appcompat = "1.7.0"
+material = "1.12.0"
+junit4 = "4.13.2"
+androidx-test-ext-junit = "1.1.5"
+androidx-test-espresso-core = "3.5.1"
+androidx-test-ext-junit-old = "1.2.1"
+androidx-test-espresso-core-old = "3.6.1"
+
+retrofit = "3.0.0"
+okhttp = "4.12.0"
+gson = "2.13.1"
+hilt = "2.56.2"
+constraintlayout = "2.1.4"
+lifecycle-livedata-ktx = "2.9.0"
+lifecycle-viewmodel-ktx = "2.9.0"
+navigation-fragment = "2.6.0"
+navigation-ui = "2.6.0"
+legacy-support-v4 = "1.0.0"
+svga = "2.6.1"
+
+[libraries]
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
+
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
+androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidx-test-espresso-core" }
+
+androidx-test-ext-junit-old = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit-old" }
+androidx-test-espresso-core-old = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidx-test-espresso-core-old" }
+
+retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-scalars = { group = "com.squareup.retrofit2", name = "converter-scalars", version.ref = "retrofit" }
+retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+
+okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle-livedata-ktx" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle-viewmodel-ktx" }
+
+navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigation-fragment" }
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigation-ui" }
+
+legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacy-support-v4" }
+
+svga-player-android = { group = "com.github.svga", name = "SVGAPlayer-Android", version.ref = "svga" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "android" }
+android-library = { id = "com.android.library", version.ref = "android" }
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }

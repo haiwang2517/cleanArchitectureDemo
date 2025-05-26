@@ -2,12 +2,12 @@ package com.onenet.mytravelworld.ui.merge;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-import com.onenet.mytravelworld.data.entity.DicGiftBoxConfigEntity;
-import com.onenet.mytravelworld.domain.model.Cell;
-import com.onenet.mytravelworld.domain.model.MaterialFactory;
-import com.onenet.mytravelworld.domain.repository.DictionaryRepository;
-import com.onenet.mytravelworld.domain.repository.DomainCallback;
+import com.onenet.datasource.entity.DicGiftBoxConfigEntity;
+import com.onenet.domain.model.Cell;
+import com.onenet.domain.repository.DictionaryRepository;
+import com.onenet.domain.repository.DomainCallback;
 import com.onenet.mytravelworld.ui.UiToastCallback;
+import com.onenet.mytravelworld.ui.common.MaterialFactory;
 
 import android.util.Log;
 import androidx.lifecycle.LiveData;
