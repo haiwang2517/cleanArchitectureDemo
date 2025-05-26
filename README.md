@@ -4,6 +4,7 @@
 
 ``` text
 project
+├───common   公共组件（多组件使用）
 ├───data   数据层（网络数据操作、本地数据操作）
 │   ├───common
 │   ├───dao
@@ -24,6 +25,7 @@ project
 ```
 
 *上层服务依赖下层服务：*
+公共组件提供通用能力，如果通过配置获取不同的url(由app/ui层声明注入);
 
 - data -> domain
 - domain -> ui
