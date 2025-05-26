@@ -168,7 +168,7 @@
             android:layout_height="wrap_content"
             android:text="@string/merge_button_name"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp" tools:ignore="MissingConstraints"/>
 
     <Button
             android:id="@+id/button_get_dic"
@@ -176,5 +176,5 @@
             android:layout_height="wrap_content"
             android:text="@string/merge_get_dic"
             app:layout_constraintLeft_toRightOf="@id/button_merge"
-            android:layout_marginStart="5dp"/>
+            android:layout_marginStart="5dp" tools:ignore="MissingConstraints"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
