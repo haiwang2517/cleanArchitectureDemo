@@ -1,6 +1,43 @@
 # Clean Architecture 分层架构
 
-## 目录结构
+## 分层思想
+
+![cleanArchitecture.png](doc%2Fimages%2FcleanArchitecture.png)
+
+* 表示层：处理与UI的交互和数据ViewModel的数据展示
+* 领域层：处理业务逻辑，不包含数据存储逻辑
+* 数据层：处理数据存储逻辑，不包含业务逻辑
+
+### 官方架构图
+
+[官方建议文档](https://developer.android.google.cn/topic/architecture?hl=zh-cn)
+
+#### 界面层(表示层)
+
+![mad-arch-overview-ui.png](doc%2Fimages%2Fmad-arch-overview-ui.png)
+
+界面层（或呈现层）的作用是在屏幕上显示应用数据。每当数据发生变化时，无论是因为用户互动（例如按了某个按钮），还是因为外部输入（例如网络响应），界面都应随之更新。
+
+__界面层由以下两部分组成：__
+
+* 在屏幕上呈现数据的界面元素。您可以使用 View 或 Jetpack Compose 函数构建这些元素。
+* 用于存储数据(LiveData)、向界面提供数据以及处理逻辑的状态容器（如 ViewModel 类）。
+
+#### 网络层(领域层)
+
+![mad-arch-overview-domain.png](doc%2Fimages%2Fmad-arch-overview-domain.png)
+网域层负责封装复杂的业务逻辑，或者由多个 ViewModel 重复使用的简单业务逻辑。__每个用例都应仅负责单个功能.__
+
+#### 数据层
+
+![mad-arch-overview-data.png](doc%2Fimages%2Fmad-arch-overview-data.png)
+__数据层包含业务逻辑。__ 数据层由多个仓库组成，其中每个仓库都可以包含零到多个数据源。
+
+### Android 交互流程
+
+![flow.png](doc%2Fimages%2Fflow.png)
+
+## 项目目录结构
 
 ``` text
 project
