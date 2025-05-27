@@ -25,12 +25,12 @@ __界面层由以下两部分组成：__
 
 #### 网络层(领域层)
 
-<img src="./doc/images/mad-arch-overview-domain.png" width="60%" alt="">
+<img src="./doc/images/mad-arch-overview-domain.png" width="60%">
 网域层负责封装复杂的业务逻辑，或者由多个 ViewModel 重复使用的简单业务逻辑。__每个用例都应仅负责单个功能.__
 
 #### 数据层
 
-<img src="./doc/images/mad-arch-overview-data.png" width="60%>
+<img src="./doc/images/mad-arch-overview-data.png" width="60%">
 
 __数据层包含业务逻辑。__ 数据层由多个仓库组成，其中每个仓库都可以包含零到多个数据源。
 
