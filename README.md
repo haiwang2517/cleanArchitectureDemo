@@ -160,3 +160,43 @@ public class DicDaoDiModule {
     }
 }
 ```
+
+---
+采用 `DataBinding` 双向绑定，使用 `LiveData` 封装数据，使用 `ViewModel` 封装业务逻辑。
+
+1. `fragment_merge.xml` 代码改造，通过 `variable` 定义数据模型变量，并绑定到 `viewModel` 中。xml中通过 `@{viewModel.xxx}`
+   变量绑定数据和方法。
+
+```xml
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="viewModel"
+                type="com.onenet.mytravelworld.ui.merge.MergeViewModel"/>
+    </data>
+</layout>
+```
+
+2. 修改 `MergeFragment` 通过绑定 `DataBindingUtil`绑定 `ViewModel`.
+
+```java
+public class MergeFragment extends Fragment {
+    private FragmentMergeBinding binding;
+
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_merge, container, false);
+        binding.setViewModel(mergeViewModel);
+        binding.setLifecycleOwner(getViewLifecycleOwner());
+        return binding.getRoot();
+    }
+}
+
+```
+
+

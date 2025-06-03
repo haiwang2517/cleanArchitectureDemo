@@ -27,14 +27,15 @@ public class MergeViewModel extends ViewModel {
         this.dictionaryRepository = dictionaryRepository;
         this.uiCallback = uiCallback;
 
-        CELL_ARRAY.setValue(new Cell[] {null, new Cell(1), new Cell(2), new Cell(3), new Cell(4), new Cell(5),
-            new Cell(6), new Cell(7), new Cell(8), new Cell(9), new Cell(10), new Cell(11), new Cell(12)});
+        CELL_ARRAY.setValue(new Cell[] {new Cell(0), new Cell(1), new Cell(2), new Cell(3), new Cell(4), new Cell(5),
+            new Cell(6), new Cell(7), new Cell(8), new Cell(9), new Cell(10), new Cell(11)});
     }
 
-    private int count = 1;
+    private int count = 0;
 
     public void addMaterial() {
-        if (count > 12) {
+        if (count > 11) {
+            uiCallback.showShortToast("已经超过领取次数");
             return;
         }
         int level = ThreadLocalRandom.current().nextInt(1, 5);

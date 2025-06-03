@@ -31,6 +31,12 @@ android {
         buildConfig = true
         viewBinding true
     }
+    viewBinding {
+        enable = true
+    }
+    dataBinding {
+        enable = true
+    }
     flavorDimensions = ["env"]
     productFlavors {
         dev {
