@@ -165,7 +165,7 @@ public class DicDaoDiModule {
 采用 `DataBinding` 双向绑定，使用 `LiveData` 封装数据，使用 `ViewModel` 封装业务逻辑。
 
 1. `fragment_merge.xml` 代码改造，通过 `variable` 定义数据模型变量，并绑定到 `viewModel` 中。xml中通过 `@{viewModel.xxx}`
-   变量绑定数据和方法。
+   变量绑定数据和方法，双向绑定要使用`@={viewModel.xxx}`针对输入框要使用。
 
 ```xml
 
